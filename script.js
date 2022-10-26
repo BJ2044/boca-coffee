@@ -22,7 +22,7 @@ function displayCoffeeList(coffeeList) {
         coffeeContainer.appendChild(card)
     })
 }    
-function getCoffee() {
+function getCoffee(temp) {
     setLoading()
     fetch(`https://api.sampleapis.com/coffee/${temp}`)
     .then(response => response.json())
@@ -31,5 +31,5 @@ function getCoffee() {
     .catch(console.error)  // TODO: display error for user 
 }
 
-getCoffee()
+getCoffee('hot')
 
