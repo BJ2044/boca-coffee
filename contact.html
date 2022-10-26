@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+        <h1 id="heading">Contact</h1>
+        <p id = "datetime"></p>
+    </header>
+    <main>
+        <form action="/index.html" method="post" id="myForm">
+            <label for="">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="youremail@email.com">
+        </br> 
+        <label for="">Password</label>
+        <input id="password" name="password" type="password" placeholder="password" minlength="7" >
+    </br>
+    <label for="">Age</label>
+    <input min="18" max="100" type="number" name="age" id="age" placeholder="18++">
+</br>
+<label for="">Date</label>
+<input type="date" name="" id="">
+</br>
+<label for="description">Description</label>
+<textarea name="description" id="description" cols="30" rows="5"></textarea>
+</br>
+<label for="file">File</label>
+<input type="file" name="" id="">
+</br>
+<!-- <label id = "time" for="time">Time</label>
+    <input type="datetime-local" name="" id="">
+</br> -->
+<label for="cars">Cars</label>
+<select name="cars" id="cars" multiple>
+    <option value="selectone">Select One</option>
+    <option value="audi">Audi</option>
+    <option value="gmc">GMC</option>
+    <option value="tesla" selected>Tesla</option>
+    <option value="ford">Ford</option>
+</select>
+</br>
+<label for="radio">Select One</label>
+<input type="radio" name="select" id="" value="myRadio">
+<input type="radio" name="select" id="" value="myRadio2">
+<input type="radio" name="select" id="" value="myRadio3">
+</br>
+<button type="submit">Submit</button>
+</form>
+</main>
+<button onclick="changeHeading()">Change Heading</button>
+<button onclick="tellTime()">Tell Time</button>
+  </div>
+  <script>
+    function changeHeading() {
+        // document.getElementsByName('h1')
+        const heading = document.getElementById('heading')
+        console.log(heading)
+
+        heading.innerText = "YKTFV"
+    }
+    function tellTime() {
+        document.getElementById("datetime").innerHTML = Date()
+    }
+        </script>
+</body>
+</html>
