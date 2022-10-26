@@ -55,6 +55,7 @@
 </main>
 <button onclick="changeHeading()">Change Heading</button>
 <button onclick="tellTime()">Tell Time</button>
+<button onclick="showLocation()">Show Location</button>
   </div>
   <script>
     function changeHeading() {
@@ -67,6 +68,12 @@
     function tellTime() {
         document.getElementById("datetime").innerHTML = Date()
     }
+
+    const showLocation = () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+        alert(`latitude ${position.coords.latitude} longitude ${position.coords.longitude}`)
+    }, console.error)
+}
         </script>
 </body>
 </html>
